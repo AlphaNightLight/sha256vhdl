@@ -200,3 +200,34 @@ sha256_t sha256(buffer_t data_in, uint64_t buffer_byte_size)
 
     return data_out;
 }
+
+sha256_t sha256_string(std::string input_string)
+{
+    uint64_t buffer_byte_size = input_string.size();
+    buffer_t data_in = new uint8_t[buffer_byte_size];
+
+    for (size_t i=0; i< buffer_byte_size; ++i) {
+        data_in[i] = input_string.at(i);
+    }
+
+    sha256_t data_out = sha256(data_in, buffer_byte_size);
+    delete[] data_in;
+    return data_out;
+}
+
+sha256_t sha256_file(std::string file_path)
+{
+    ifstream fin(file_path.c_str(), ios::binary | ios::ate);
+    uint64_t buffer_byte_size = fin.tellg();
+    buffer_t data_in = new uint8_t[buffer_byte_size];
+    fin.seekg(0, ios::beg);
+    sha256_t data_out;
+
+    if (fin.read((char*)data_in, buffer_byte_size)) {
+        data_out = sha256(data_in, buffer_byte_size);
+    }
+
+    fin.close();
+    delete[] data_in;
+    return data_out;
+}

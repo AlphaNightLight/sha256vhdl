@@ -2,6 +2,8 @@
 #define __SHA256_H__
 
 #include <cstdint>
+#include <string>
+#include <fstream>
 
 #define WORD_SIZE 32
 #define N_ROUNDS 64
@@ -21,5 +23,9 @@ typedef struct block_t {
 
 
 sha256_t sha256(buffer_t data_in, uint64_t buffer_byte_size);
+
+sha256_t sha256_string(std::string input_string);
+
+sha256_t sha256_file(std::string file_path);
 
 #endif //__SHA256_H__
