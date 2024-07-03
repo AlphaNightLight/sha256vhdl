@@ -7,6 +7,7 @@ A C++ implementation is also provided, to be a starting point as well as a compa
 
 The folder structure is the following:
 - *CPP/*: folder containing the C++ implementation
+- *sha256vhdl.srcs*: folder containing the vhdl implementation
 
 ## Mantainer
 

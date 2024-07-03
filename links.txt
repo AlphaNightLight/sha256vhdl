@@ -1,0 +1,11 @@
+https://www.righto.com/2014/02/bitcoin-mining-hard-way-algorithms.html
+
+https://en.bitcoin.it/wiki/Difficulty
+
+https://emn178.github.io/online-tools/sha256.html
+
+https://developer.bitcoin.org/reference/block_chain.html
+
+https://learnmeabitcoin.com/technical/block/
+
+https://medium.com/fcats-blockchain-incubator/understanding-the-bitcoin-blockchain-header-a2b0db06b515
